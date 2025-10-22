@@ -27,14 +27,21 @@ This program automatically:
 
 ### Easy Setup:
 
-1. **Download the files** to a folder
-2. **Install requirements**:
+1. **Download all files** to a folder
+
+2. **Install Python packages**:
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run the program**:
+
+3. **Install Tesseract OCR**:
+   - Download from: https://github.com/UB-Mannheim/tesseract/wiki
+   - Run installer and check "Add to PATH"
+   - Program will find it automatically
+
+4. **Run the program**:
    ```bash
-   python coc_farmer.py
+   python Clash_Auto_Attack.py
    ```
 
 ## 🎮 How to Use
@@ -49,20 +56,25 @@ This program automatically:
    - **Stop**: Stops the program
    - **Just Attack**: Does one quick attack
    - **Surrender**: Ends current battle
+   - **Attack Right Now**: Deploys troops immediately
+   - **Loot Bonus**: Quick attack sequence
 
 3. **Hotkeys** (quick keys):
    - `Ctrl+Shift+Enter`: Start farming
    - `Ctrl+Shift+Backspace`: Stop farming
    - `Ctrl+Shift+A`: Attack right now
    - `Ctrl+Shift+S`: Surrender
+   - `Ctrl+Shift+J`: Just attack
+   - `Ctrl+Shift+F`: Find base only
 
 ## ⚙️ Configuration
 
 You can customize:
-- **Troop deployment**: Which troops to use and how many
+- **Troop deployment**: Which troops to use and how many (Mass E-drag Wroks All the Time)
 - **Attack timing**: How long to attack for
 - **Loot thresholds**: Only attack bases with good loot
 - **Coordinates**: Where to click on screen
+- **Army composition**: Set your troop keys and counts
 
 ## 🛠️ Troubleshooting
 
@@ -71,17 +83,33 @@ You can customize:
 - Check that coordinates match your screen
 - Verify required images are in the `img` folder
 - Ensure Tesseract OCR is installed
+- Run as Administrator if hotkeys don't work
+
+**Hotkeys not working?**
+- Program auto-refreshes hotkeys every 60 seconds
+- Try running as Administrator
+- Check if other programs are using same hotkeys
 
 ## 📁 Files Needed
 
-- `coc_farmer.py` - Main program
+- `Clash_Auto_Attack.py` - Main program
 - `requirements.txt` - Python packages
 - `img/` folder with game images
 - `Tesseract-OCR/` for text reading
 
+## 🔧 Requirements
+
+Install all needed packages:
+```bash
+pip install pytesseract pyautogui keyboard Pillow mouse
+```
+
 ## ❓ Need Help?
 
-Check the code comments or adjust settings in the program. Start with small tests before long farming sessions!
+- Check that all images are in the `img` folder
+- Make sure Tesseract is installed and in PATH
+- Adjust coordinates for your screen resolution
+- Start with "Just Attack" to test before full farming
 
 ---
 
